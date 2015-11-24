@@ -147,6 +147,7 @@ input.tiny {
 	display: inline-block; 
 	padding-right:15px;
 	padding-left:15px;
+	width: 100px;
 	position:relative;
 	/* border-bottom: 3px solid green;  */
 	/* padding-top: 15px; */
@@ -156,23 +157,27 @@ input.tiny {
 .top-navigation {
 	margin-top: 15px; 
 	position:absolute;
-	padding-left:0px; 
+	padding-left:0px;	
 	overflow: hidden;
 	white-space: nowrap;
-}
-.sf-menu li:hover,
-.sf-menu li.sfHover,
-.sf-menu li.current-menu-item {
-    background: none;
-    border-bottom: 2px solid green;
+	margin-left: 0px;
+	transition:   margin-left	 .2s ease-in-out;
 }
 
-.sf-menu li {
-    -webkit-transition: border .2s;
-    transition: border .2s;
+
+
+
+.nav-item-after {
+  display: block;
+  position: relative;
+  left: 0;
+  margin-left: 0px;
+  top: 50px;
+  width: 100px;
+  height: 8px;
+  background-color: green;
+  content: "";
+  transition:   margin-left	 .2s ease-in-out;
+  
 }
 
-.active 
-{
-	border-bottom: 3px solid green;
-}
