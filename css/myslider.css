@@ -94,13 +94,14 @@ input.tiny {
     padding-bottom: 50px;
 	
 	
+	
 }
 
 
-.my-header-nav{file:///C:/Users/Donleqt/Desktop/HINFO/assets/www/img/slider/slider2.png
+.my-header-nav{
     /*padding-top: 6px;*/
-    padding-left:10px;
-    padding-right:10px;
+    padding-left:15px;
+    padding-right:15px;
 }
 
 .slider-btn{
@@ -112,7 +113,11 @@ input.tiny {
 
 /*Blurred background filter*/
 .blur-filter {
-    
+    /* -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -o-filter: blur(4px);
+    -ms-filter: blur(4px);
+    filter: blur(px); */
 	
 
 }
@@ -132,4 +137,39 @@ input.tiny {
 
 	
 	
+}
+
+.nav-item{
+	
+	display: inline-block; 
+	padding-right:15px;
+	padding-left:15px;
+	position:relative;
+	/* border-bottom: 3px solid green;  */
+	/* padding-top: 15px; */
+	
+}
+
+.top-navigation {
+	margin-top: 15px; 
+	position:absolute;
+	padding-left:0px; 
+	overflow: hidden;
+	white-space: nowrap;
+}
+.sf-menu li:hover,
+.sf-menu li.sfHover,
+.sf-menu li.current-menu-item {
+    background: none;
+    border-bottom: 2px solid green;
+}
+
+.sf-menu li {
+    -webkit-transition: border .2s;
+    transition: border .2s;
+}
+
+.active 
+{
+	border-bottom: 3px solid green;
 }
