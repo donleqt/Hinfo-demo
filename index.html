@@ -61,18 +61,16 @@
 			<i class="fa fa-search fa-2x pull-right " ></i>
 			
 			<div class="clearfix"></div>
-			<ul class="top-navigation">
-				<!-- <li  class="nav-item" style="border-bottom: 3px solid green; ">
-							<p>{{slides[carouselIndex].name | uppercase}} </p> 
-	
-				</li> -->
-				<li ng-click="clickbar(slide.id -1)" ng-repeat="slide in slides"  class="nav-item {{slide.id - 1 == carouselIndex ? 'active' : ' '}}">
+			<ul class="top-navigation" style="margin-left: -{{100*carouselIndex}}px">
+				
+				<li ng-click="clickbar($index)" ng-repeat="slide in slides"  class="nav-item">
 							<p>{{slide.name | uppercase}} </p> 
-	
+				
 				</li>
 				
 
 			</ul>
+			<div class="nav-item-after" ></div>
 		</div>
 		
 	</div>
