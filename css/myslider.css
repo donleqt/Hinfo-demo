@@ -109,6 +109,9 @@ input.tiny {
     border-radius:1px;
 	background: #4d3b56 !important;
     font-size: 13pt;
+	-webkit-box-shadow: 10px 10px 14px -8px rgba(118,65,153,1);
+	-moz-box-shadow: 10px 10px 14px -8px rgba(118,65,153,1);
+	box-shadow: 10px 10px 14px -8px rgba(118,65,153,1);
 }
 
 /*Blurred background filter*/
