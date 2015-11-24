@@ -52,8 +52,8 @@
                 img: 'slider2.png',
                 color: $scope.colors[1],
                 odd: true,
-                description:'Festival Huế 2016 có chủ đề “710 năm Thuận Hóa - Phú Xuân - Thừa Thiên Huế; di sản văn hóa với hội nhập và phát triển” sẽ diễn ra từ ngày 29.4 đến ngày 4.5.2016.',
-                name:'Festival'
+                description:'Tổng hợp những thông tin mới nhất về văn hóa, chính trị, xã hội. Mang đến những bài viết nóng bỏng đang được dư luận quan tâm.',
+                name:'Tin tức'
             },
             {
                 id: 3,
@@ -61,8 +61,8 @@
                 img: 'slider3.png',
                 color: $scope.colors[2],
                 odd: false,
-                description:'Festival Huế 2016 có chủ đề “710 năm Thuận Hóa - Phú Xuân - Thừa Thiên Huế; di sản văn hóa với hội nhập và phát triển” sẽ diễn ra từ ngày 29.4 đến ngày 4.5.2016.',
-                name:'Festival'
+                description:'Chuyên mục thông tin địa điểm. Liệt kê, hướng dẫn những điểm đến hữu ích  cho quí khách. Tham quan, Ăn uống, Di chuyển, Mua sắm, Lưu niệm, Lưu trú, Giải trí, Ngân hàng',
+                name:'Địa điểm'
             },
             {
                 id: 4,
@@ -70,17 +70,26 @@
                 img: 'slider4.png',
                 color: $scope.colors[3],
                 odd: true,
-                description:'Festival Huế 2016 có chủ đề “710 năm Thuận Hóa - Phú Xuân - Thừa Thiên Huế; di sản văn hóa với hội nhập và phát triển” sẽ diễn ra từ ngày 29.4 đến ngày 4.5.2016.',
-                name:'Festival'
+                description:'Huế tuyệt vời! Cùng nhau khám phá huế qua chuyên mục này nhé. Di sản, Văn hóa, Ẩm thực, Khám phá, những thông tin hữu ích đều dành cho bạn đó !^^',
+                name:'Du lịch'
+            },
+			{
+                id: 5,
+                label: 'Cuong 6',
+                img: 'slider4.png',
+                color: $scope.colors[3],
+                odd: true,
+                description:'Hình ảnh về danh lam thắng cánh. Video hoạt động, một kiếu du lịch mới. Xem và cảm nhận !^^',
+                name:'Media'
             }
 			
         ];
 
 
-
+		
         //$scope.slides = [];
 
-
+		
         //addSlides($scope.slides, 'sports', 50);
 
         // 2nd ngRepeat demo
@@ -146,15 +155,27 @@
             target.push(getImage(target));
         }
 		
+		/* $scope.popupContent= "";
+		$scope.popupHeader= ""; */
 		$scope.popupdone=false;
-		$scope.bluredpopup = function () {
-			$scope.popupdone=true;
+		/* $scope.bluredpopup = function ($event) {
 			
-		};
+			
+			$scope.popupdone=true;
+			var target = $event.target;
+			$scope.popupContent=$scope.slides[target.getAttribute('slide-id') - 1].description;
+			$scope.popupHeader=$scope.slides[target.getAttribute('slide-id') - 1].name;
+		}; */
 		
 		$scope.unBlur= function () {
 			$scope.popupdone=false;
 		};
+		
+		$scope.clickbar= function (a)
+		{
+			$scope.carouselIndex = a;
+			
+		}
         $scope.slides7 = [];
         $scope.carouselIndex7 = 0;
         $scope.setOfImagesToShow = 3;
@@ -219,7 +240,18 @@
         };
     });
 
-
+	myApp.directive('blurred', function () {
+		  var directive = { restrict: 'A' };
+		  directive.compile = function compile (tElement) {
+			// taken from blur.js homepage
+			tElement.blurjs({
+			  source: 'body',
+			  radius: 7,
+			  overlay: 'rgba(255,255,255,0.4)'
+			});
+		  };
+		  return directive;
+		});
 
     angular.module('ngIOS9UIWebViewPatch', ['ng']).config(['$provide', function($provide) {
         'use strict';
