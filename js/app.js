@@ -8,7 +8,7 @@ var globalDevice={
     device_version:''
 };
 
-var module = angular.module('myApp', ['ngError','ngTouch','infinite-scroll','uiGmapgoogle-maps','ngDialog','ngCookies','ngRoute','panzoom','angular-carousel']);
+var module = angular.module('myApp', ['ngError','ngAnimate','ngTouch','infinite-scroll','uiGmapgoogle-maps','ngDialog','ngCookies','ngRoute','panzoom','angular-carousel']);
 module.config(['$routeProvider','$httpProvider', function($routeProvider,$httpProvider) {
     //
     $routeProvider
