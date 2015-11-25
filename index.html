@@ -24,7 +24,7 @@
 
     <link rel="stylesheet" type="text/css" href="css/radio/build.css">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
-
+	<link rel="stylesheet" type="text/css" href="css/radio/ng-mobile-menu.min.css">
     <script src="bower_components/angular/jquery-1.10.2.min.js"></script>
 	
 	<script type="application/javascript" src="js/blur.js"> </script>
@@ -61,22 +61,22 @@
 			<i class="fa fa-search fa-2x pull-right " ></i>
 			
 			<div class="clearfix"></div>
-			<ul class="top-navigation" style="margin-left: -{{100*carouselIndex}}px">
+			<ul  class="top-navigation" style="margin-left: {{carouselIndex > 1 ? -150*(carouselIndex-1) : 0}}px"> <!-- style="-webkit-transform: translate(-{{20*carouselIndex}}%, 0);" -->
 				
 				<li ng-click="clickbar($index)" ng-repeat="slide in slides"  class="nav-item">
 							<p>{{slide.name | uppercase}} </p> 
-				
+				<div class="nav-item-after" ng-class="{'nav-item-after-show': $index == carouselIndex}"></div>
 				</li>
 				
 
 			</ul>
-			<div class="nav-item-after" ></div>
+			
 		</div>
 		
 	</div>
 	
-    <ul rn-carousel="" rn-carousel-controls="" rn-carousel-index="carouselIndex" rn-carousel-buffered="" class="carousel1 ng-scope" style="text-align: center; padding-top:40px">
-        <li ng-repeat="slide in slides|carouselSlice:carouselBufferIndex:carouselBufferSize track by slide.id" style=" display: inline-block; transform: translate3d(-200%, 0px, 0px);">
+    <ul  rn-carousel="" rn-carousel-controls="" rn-carousel-index="carouselIndex" rn-carousel-buffered="" class="carousel1 ng-scope" style="text-align: center; padding-top:40px">
+        <li  ng-repeat="slide in slides|carouselSlice:carouselBufferIndex:carouselBufferSize track by slide.id"  style=" display: inline-block; transform: translate3d(-200%, 0px, 0px);">
             <!--<h1>{{slide.label}}</h1>-->
             <img  ng-src="img/slider/{{slide.img}}" class="img-responsive img-circle "  style="margin: 0 auto;    border: 10px solid #D2D2D2; max-width: 200px">
             <p class="slider-description" >{{slide.description}}</p>
@@ -100,6 +100,8 @@
 
 <script src="bower_components/angular-carousel/dist/angular-carousel.js"></script>
 
+<!-- Menu mobile -->
+<script type="application/javascript" src="js/ng-mobile-menu.js"></script>
 <!--Zoom-->
 <script type="application/javascript" src="bower_components/angular-pan-zoom/release/panzoom-custom.js"></script>
 <script type="application/javascript" src="bower_components/angular-mousewheel/mousewheel.js"></script>
