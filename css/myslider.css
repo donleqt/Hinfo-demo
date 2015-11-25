@@ -147,8 +147,10 @@ input.tiny {
 	display: inline-block; 
 	padding-right:15px;
 	padding-left:15px;
-	width: 100px;
+	width: 150px;
+	padding-bottom: 5px;
 	position:relative;
+	text-align: center;
 	/* border-bottom: 3px solid green;  */
 	/* padding-top: 15px; */
 	
@@ -162,12 +164,16 @@ input.tiny {
 	white-space: nowrap;
 	margin-left: 0px;
 	transition:   margin-left	 .2s ease-in-out;
+	-webkit-transition:   margin-left	 .2s ease-in-out;
+    -moz-transition:   margin-left	 .2s ease-in-out;
+    -o-transition:   margin-left	 .2s ease-in-out;
+    -ms-transition:   margin-left	 .2s ease-in-out;
 }
 
 
 
 
-.nav-item-after {
+.nav-item-after1 {
   display: block;
   position: relative;
   left: 0;
@@ -181,3 +187,19 @@ input.tiny {
   
 }
 
+.nav-item-after {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 0%;
+  height: 6px;
+  background-color: green;
+  content: "";
+  transition: width .3s ease-in-out;
+  
+}
+.nav-item-after-show {
+	
+	  width: 100%;
+}
