@@ -61,7 +61,7 @@
 			<i class="fa fa-search fa-2x pull-right " ></i>
 			
 			<div class="clearfix"></div>
-			<ul  class="top-navigation" style="margin-left: {{carouselIndex > 1 ? -100*(carouselIndex-1) : 0}}px"> <!-- style="-webkit-transform: translate(-{{20*carouselIndex}}%, 0);" -->
+			<ul  class="top-navigation" style="-webkit-transform: translate(-{{carouselIndex>1 ?20*(carouselIndex-1) : 0}}%, 0);""> 
 				
 				<li ng-click="clickbar($index)" ng-repeat="slide in slides"  class="nav-item">
 							<p>{{slide.name | uppercase}} </p> 
