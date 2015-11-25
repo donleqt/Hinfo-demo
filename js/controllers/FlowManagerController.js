@@ -21,8 +21,8 @@
         };
 
         $scope.carouselIndex = 0;
-
-        //$scope.carouselIndex2 = 0;
+		$scope.abcd = 1;
+        $scope.carouselIndex2 = 0;
         //$scope.carouselIndex2 = 1;
         //$scope.carouselIndex3 = 5;
         //$scope.carouselIndex4 = 5;
@@ -71,7 +71,7 @@
                 color: $scope.colors[3],
                 odd: true,
                 description:'Huế tuyệt vời! Cùng nhau khám phá huế qua chuyên mục này nhé. Di sản, Văn hóa, Ẩm thực, Khám phá, những thông tin hữu ích đều dành cho bạn đó !^^',
-                name:'Du lịch'
+                name:'Khám phá huế'
             },
 			{
                 id: 5,
@@ -240,6 +240,24 @@
         };
     });
 
+	
+	myApp.directive('spyStyle', [function () {
+
+   return{
+        restrict: 'A',
+        link: function(scope, element, attrs){
+            scope.$watch(function() {return element.attr('style'); }, function(newValue){
+               
+			   
+			   alert(element.attr('style'));
+			   
+				
+            });
+        }
+    };
+
+}]);
+	
 	myApp.directive('blurred', function () {
 		  var directive = { restrict: 'A' };
 		  directive.compile = function compile (tElement) {
