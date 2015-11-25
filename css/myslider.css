@@ -163,11 +163,11 @@ input.tiny {
 	overflow: hidden;
 	white-space: nowrap;
 	margin-left: 0px;
-	transition:   margin-left	 .2s ease-in-out;
-	-webkit-transition:   margin-left	 .2s ease-in-out;
-    -moz-transition:   margin-left	 .2s ease-in-out;
-    -o-transition:   margin-left	 .2s ease-in-out;
-    -ms-transition:   margin-left	 .2s ease-in-out;
+	transition:   transform	 .2s ease-in-out;
+	-webkit-transition:   transform	 .2s ease-in-out;
+    -moz-transition:   transform	 .2s ease-in-out;
+    -o-transition:   transform	 .2s ease-in-out;
+    -ms-transition:   transform	 .2s ease-in-out;
 }
 
 
@@ -197,11 +197,21 @@ input.tiny {
   background-color: green;
   content: "";
   transform: scale(0);
-
-  transition: transform .3s ease-in-out;
-  
+  -webkit-transform: scale(0);
+   -moz-transform: scale(0);
+   -o-transform: scale(0);
+   -ms-transform: scale(0);
+ transition:   transform	 .2s ease-in-out;
+	-webkit-transition:   transform	 .2s ease-in-out;
+    -moz-transition:   transform	 .2s ease-in-out;
+    -o-transition:   transform	 .2s ease-in-out;
+    -ms-transition:   transform	 .2s ease-in-out;
 }
 .nav-item-after-show {
 	
-	  transform: scale(1);
+	  -webkit-transform: scale(1);
+   -moz-transform: scale(1);
+   -o-transform: scale(1);
+   -ms-transform: scale(1);
+   -transform: scale(1);
 }
