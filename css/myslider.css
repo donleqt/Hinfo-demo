@@ -163,11 +163,10 @@ input.tiny {
 	overflow: hidden;
 	white-space: nowrap;
 	margin-left: 0px;
-	transition:   transform	 .2s;
-	-webkit-transition:   transform	 .2s;
-    -moz-transition:   transform	 .2s;
-    -o-transition:   transform	 .2s;
-    -ms-transition:   transform	 .2s;
+	-webkit-transition: transform 400ms ease;
+        -moz-transition: transform 400ms ease;
+        -o-transition: transform 400ms ease;
+        transition: transform 400ms ease;;
 }
 
 
@@ -201,11 +200,10 @@ input.tiny {
    -moz-transform: scale(0);
    -o-transform: scale(0);
    -ms-transform: scale(0);
-	transition:   transform	 .2s ;
-	-webkit-transition:   transform	 .2s;
-    -moz-transition:   transform	 .2s ;
-    -o-transition:   transform	 .2s;
-    -ms-transition:   transform	 .2s ;
+	-webkit-transition: transform 400ms ease;
+        -moz-transition: transform 400ms ease;
+        -o-transition: transform 400ms ease;
+        transition: transform 400ms ease;;
 }
 .nav-item-after-show {
 	
