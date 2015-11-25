@@ -61,7 +61,7 @@
 			<i class="fa fa-search fa-2x pull-right " ></i>
 			
 			<div class="clearfix"></div>
-			<ul  class="top-navigation" style="-webkit-transform: translate(-{{carouselIndex>1 ?20*(carouselIndex-1) : 0}}%, 0);""> 
+			<ul  class="top-navigation" style="-webkit-transform: translate(-{{carouselIndex>1 ?100/slides.length*(carouselIndex-1) : 0}}%, 0);""> 
 				
 				<li ng-click="clickbar($index)" ng-repeat="slide in slides"  class="nav-item">
 							<p>{{slide.name | uppercase}} </p> 
@@ -76,7 +76,7 @@
 	</div>
 	
     <ul  rn-carousel="" rn-carousel-controls="" rn-carousel-index="carouselIndex" rn-carousel-buffered="" class="carousel1 ng-scope" style="text-align: center; padding-top:40px">
-        <li  ng-repeat="slide in slides|carouselSlice:carouselBufferIndex:carouselBufferSize track by slide.id"  style=" display: inline-block; transform: translate3d(-200%, 0px, 0px);">
+        <li class= "fix-lag"  ng-repeat="slide in slides|carouselSlice:carouselBufferIndex:carouselBufferSize track by slide.id"  style="display: inline-block; transform: translate3d(-200%, 0px, 0px);">
             <!--<h1>{{slide.label}}</h1>-->
             <img  ng-src="img/slider/{{slide.img}}" class="img-responsive img-circle "  style="margin: 0 auto;    border: 10px solid #D2D2D2; max-width: 200px">
             <p class="slider-description" >{{slide.description}}</p>
