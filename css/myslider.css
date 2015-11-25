@@ -147,10 +147,10 @@ input.tiny {
 	display: inline-block; 
 	padding-right:15px;
 	padding-left:15px;
-
+	
 	padding-bottom: 5px;
 	position:relative;
-	text-align: left;
+	text-align: center;
 	/* border-bottom: 3px solid green;  */
 	/* padding-top: 15px; */
 	
